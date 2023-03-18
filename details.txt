@@ -11,7 +11,11 @@ Data Requirements:
 - screen:
     - where the borders are
 - player
+    - which player, left or right?
     - where the paddle is
+        - x position
+        - y position
+    - y velocity
     - scores
 - ball
     - where it is

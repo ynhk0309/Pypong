@@ -5,7 +5,7 @@ INITIAL_SCORE = 0
 
 
 class Player:
-    # class variable (every player has the same length)
+    # class variable (every player has the same length for the paddle)
     LENGTH = 50
 
     # constructor (set initial data for a new player)
