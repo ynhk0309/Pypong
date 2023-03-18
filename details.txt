@@ -12,18 +12,11 @@ Data Requirements:
     - where the borders are
 - player
     - where the paddle is
+    - scores
 - ball
     - where it is
     - the direction it's heading
 - state (what state of the game we are in)
-
-Controls:
-- Left player:
-    - W to move paddle up
-    - S to move paddle down
-- Right player:
-    - Up arrow to move paddle up
-    - Down arrow to move paddle down
 
 States:
 - Initial:
@@ -38,15 +31,25 @@ States:
     - move the ball
     - move paddles as needed
 - End:
-    - (when any player has score of 10)
     - show the winner's name + score
     - lock the paddles + ball
     - optional reset button to restart the game
 
 Events:
 - User events
-    - key pressed/down/!pressed
+    - key pressed/down/!pressed:
 
 - Boundary events
     - ball or paddle hits top/bottom edge: bounce
     - ball hits left/right edge: update right/left player score
+
+- Score events
+    - player reaches score of 10: switch to end state
+
+Rules/Controls:
+- Left player:
+    - W to move paddle up
+    - S to move paddle down
+- Right player:
+    - Up arrow to move paddle up
+    - Down arrow to move paddle down
