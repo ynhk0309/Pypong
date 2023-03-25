@@ -8,8 +8,6 @@ UI Requirements:
 - 2 scores (make one and copy it)
 
 Data Requirements:
-- screen:
-    - where the borders are
 - player
     - which player, left or right?
     - where the paddle is
@@ -20,6 +18,7 @@ Data Requirements:
 - ball
     - where it is
     - the direction it's heading
+        - constant speed
 - state (what state of the game we are in)
 
 States:
