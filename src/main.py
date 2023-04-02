@@ -1,10 +1,21 @@
+from data.player import Player
+from data.player_side import PlayerSide
+from data.ball import Ball
+from data.ball_direction import BallXDirection, BallYDirection
+from data.screen import surface
 import pygame
+import random
 
 pygame.init()
 
-screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 running = True
+
+player_1 = Player(PlayerSide.LEFT, 160)
+player_2 = Player(PlayerSide.RIGHT, 1120)
+
+ball = Ball(random.choice(list(BallXDirection)), random.choice(list(BallYDirection)))
+
 
 while running:
     # Process player inputs.
@@ -14,8 +25,6 @@ while running:
 
     # Do logical updates here.
     # ...
-
-    screen.fill("purple")  # Fill the display with a solid color
 
     # Render the graphics here.
     # ...

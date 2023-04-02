@@ -1,6 +1,9 @@
+import pygame
+from src.data.screen import surface
+
 # constants: initial values for a ball
-INITIAL_X_POSITION = 300
-INITIAL_Y_POSITION = 200
+INITIAL_X_POSITION = surface.get_width()/2
+INITIAL_Y_POSITION = surface.get_height()/2
 
 
 class Ball:
@@ -13,3 +16,4 @@ class Ball:
         self.y_position = INITIAL_Y_POSITION
         self.x_direction = x_direction
         self.y_direction = y_direction
+        self.circle = pygame.draw.circle(surface, "white", (self.x_position,self.y_position), 15)
