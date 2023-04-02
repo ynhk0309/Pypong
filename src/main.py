@@ -2,16 +2,15 @@ import pygame
 
 pygame.init()
 
-screen = pygame.display.set_mode((1280,720))
-
+screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
+running = True
 
-while True:
+while running:
     # Process player inputs.
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            raise SystemExit
+            running = False
 
     # Do logical updates here.
     # ...
@@ -22,4 +21,6 @@ while True:
     # ...
 
     pygame.display.flip()  # Refresh on-screen display
-    clock.tick(60)         # wait until next frame (at 60 FPS)
+    clock.tick(60)  # wait until next frame (at 60 FPS)
+
+pygame.quit()
