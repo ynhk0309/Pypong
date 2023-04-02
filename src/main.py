@@ -1,9 +1,25 @@
-from data.player import Player
-from data.player_side import PlayerSide
-from data.ball import Ball
-from data.ball_direction import BallXDirection, BallYDirection
+import pygame
 
-# creating a new ball
-ball = Ball(BallXDirection.RIGHT, BallYDirection.UP)
+pygame.init()
 
-print(ball.X_POSITION, ball.Y_POSITION, ball.x_direction, ball.y_direction, ball.SPEED)
+screen = pygame.display.set_mode((1280,720))
+
+clock = pygame.time.Clock()
+
+while True:
+    # Process player inputs.
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            raise SystemExit
+
+    # Do logical updates here.
+    # ...
+
+    screen.fill("purple")  # Fill the display with a solid color
+
+    # Render the graphics here.
+    # ...
+
+    pygame.display.flip()  # Refresh on-screen display
+    clock.tick(60)         # wait until next frame (at 60 FPS)
