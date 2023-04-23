@@ -56,3 +56,6 @@ Rules/Controls:
 - Right player:
     - Up arrow to move paddle up
     - Down arrow to move paddle down
+
+Nice-to-haves:
+- Fix bounding to reset to top / bottom position when reaching/surpassing bounds (prevent inconsistent gap between paddle and screen border)
