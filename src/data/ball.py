@@ -10,7 +10,7 @@ INITIAL_Y_POSITION = surface.get_height()/2
 
 class Ball:
     # class variable (ball has the same speed at any instance)
-    SPEED = 300
+    SPEED = 400
     RADIUS = 7.5
 
     # constructor (set initial data for a new ball)

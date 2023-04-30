@@ -9,6 +9,7 @@ INITIAL_SCORE = 0
 class Player:
     # class variable (every player has the same length for the paddle)
     LENGTH = 90
+    WIDTH = 15
     PLAYER_VELOCITY = 450
 
     # constructor (set initial data for a new player)
@@ -17,4 +18,4 @@ class Player:
         self.position = pygame.Vector2(initial_x_position, surface.get_height()/2)
         self.y_velocity = INITIAL_Y_VELOCITY
         self.score = INITIAL_SCORE
-        self.rec = pygame.draw.rect(surface, "white", pygame.Rect(self.position.x, self.position.y, 30, Player.LENGTH))
+        self.rec = pygame.draw.rect(surface, "white", pygame.Rect(self.position.x, self.position.y, Player.WIDTH, Player.LENGTH))
